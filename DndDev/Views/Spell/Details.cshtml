@@ -1,0 +1,29 @@
+﻿@model DndDev.Repository.Spell
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    <li><b>Spell Level</b>
+        @foreach (var item in @Model.SpellLevels)
+        {
+            @item.Class <i>@item.Level</i>
+        }
+    </li>
+    <li><b>Spell Resistance</b> @(@Model.SpellResistance?"Yes":"No")</li>
+    <li><b>Duration</b> @Model.Duration</li>
+    <li><b>Target</b> @Model.Target</li>
+    <li><b>Casting Time</b> @Model.CastingTime</li>
+    <li><b>Range</b> @Model.Range.ToString()</li>
+    <li><b>Saving Throw</b> @(@Model.SavingThrow?"Yes":"No")</li>
+    <li><b>Spell Component</b> @Model.Component.ToString()</li>
+    <li><b>School</b> @Model.School</li>
+    <li><b>Type</b> @Model.Type.ToString()</li>
+</ul>
+
+<h2>Spell Details</h2>
+
+@Model.Description
+

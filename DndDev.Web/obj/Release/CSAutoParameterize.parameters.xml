@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="RavenHQ-Web.config Connection String" description="RavenHQ Connection String used in web.config by the application to access the database." defaultValue="Url=https://aeo.ravenhq.com/databases/holymoo-SpellBook;ApiKey=377a3c54-9967-4512-9062-ed79bdcc1caa" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Code\\SpellBook\\Main\\Feature\\InitialDevelopment\\DndDev\\DndDev\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RavenHQ']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,193 @@
+﻿@using DndDev.Web.Model;
+@model DndDev.Domain.Spell.Spell
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<div class="form-signin">
+
+    <h2>Update Spell</h2>
+
+    <br />
+
+    <div class="form-horizontal">
+
+        <div class="control-group">
+            <label class="control-label">Spell Name</label>
+            <div class="controls">
+                <input type="text" data-bind="value: Name" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Target</label>
+            <div class="controls">
+                <input type="text" data-bind="value: Targets" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Casting Time</label>
+            <div class="controls">
+                <input type="text" data-bind="value: CastingTime" class="input-xlarge">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Duration</label>
+            <div class="controls">
+                <input type="text" data-bind="value: Duration" class="input-xlarge">
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label">Range</label>
+            <div class="controls">
+                <div class="btn-group" data-toggle="buttons-radio">
+                    @foreach (var range in Enum.GetValues(typeof(DndDev.Domain.Spell.SpellRange)).Cast<DndDev.Domain.Spell.SpellRange>())
+                    {
+                        <button type="button" value="@((int)Enum.Parse(typeof(DndDev.Domain.Spell.SpellRange), range.ToString()))" data-bind="click: function() { Range('@((int)Enum.Parse(typeof(DndDev.Domain.Spell.SpellRange), range.ToString()))') }, css: { active: Range() == '@((int)Enum.Parse(typeof(DndDev.Domain.Spell.SpellRange), range.ToString()))' }" class="btn">@range</button>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Attributes</label>
+            <div class="controls">
+                <label class="checkbox">
+                    <input data-bind="checked: SpellResistance" type="checkbox">
+                    Spell Resistance
+                </label>
+                <label class="checkbox">
+                    <input data-bind="checked: SavingThrow" type="checkbox">
+                    Saving Throw
+                </label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Component</label>
+            <div class="controls">
+                <label class="checkbox">
+                    <input data-bind="checked: Verbal" type="checkbox">
+                    Verbal
+                </label>
+                <label class="checkbox">
+                    <input data-bind="checked: Somatic" type="checkbox">
+                    Somatic
+                </label>
+                <label class="checkbox">
+                    <input data-bind="checked: Material" type="checkbox">
+                    Material
+                </label>
+                <label class="checkbox">
+                    <input data-bind="checked: Focus" type="checkbox">
+                    Focus
+                </label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Class Levels</label>
+            <div class="controls">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Class Name</th>
+                            <th>Level</th>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: SpellLevels">
+                        <tr>
+                            <td><span data-bind="text: $data.SpellClass"></span></td>
+                            <td>Level <span data-bind="text: $data.Level"></span></td>
+                            <td><a href="#" class="btn" data-bind="click: $parent.removeSpellLevel">Remove</a></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <input type="text" data-bind="value: ClassToAdd">
+                                <input class="input-small" type="number" data-bind="value: LevelToAdd">
+                                <button class="btn btn-inverse" data-bind="click: addSpellLevel">Add</button>
+                            </td>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Description</label>
+            <div class="controls">
+                <textarea style="width: 100%; height: 200px;" data-bind="value: Description"></textarea>
+            </div>
+        </div>
+
+        <br />
+        <input type="button" value="Update" class="btn btn-inverse" data-bind="click: updateSpell" />
+
+        <div id="myModal" class="modal hide fade">
+            <div class="modal-body">
+                <h2>Loading...</h2>
+                <div class="progress progress-striped active">
+                    <div class="bar" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var spellViewModel = ko.mapping.fromJS(@Html.Raw(Model.ToJson()));
+
+        spellViewModel.ClassToAdd = "";
+        spellViewModel.LevelToAdd = 1;
+
+        // Name:        addSpellLevel
+        // Description  Responsible for adding a Spell Level to the list on the Page 
+        //              based on the data provided by the user
+        spellViewModel.addSpellLevel = function () {
+            spellViewModel.SpellLevels.push({ SpellClass: spellViewModel.ClassToAdd, Level: spellViewModel.LevelToAdd });
+        };
+
+        // Name:        removeSpellLevel
+        // Description: Responsible for removing the the spellLevel from the list 
+        //              just in case the sure makes a mistake
+        spellViewModel.removeSpellLevel = function () {
+            spellViewModel.SpellLevels.remove(this);
+        };
+
+        // Name:        updateSpell
+        // Description: Takes the data contained in the View and sends it back 
+        //              to the server to be inserted into the database
+        self.updateSpell = function () {
+            $.ajax({
+                beforeSend: function () { $('#myModal').modal('show') }, //Show loading
+                complete: function () { $('#myModal').modal('hide') }, //Hide loading
+                url: "/spell/update/",
+                type: 'post',
+                data: ko.toJSON(spellViewModel),
+                contentType: 'application/json',
+                success: function (result) {
+                    window.location = "/spell/";
+                }
+            });
+        };
+
+        ko.applyBindings(spellViewModel);
+
+        // Getting JQuery Mobile to Play Nice with Knockout
+        $("#foo").hide().trigger('updatelayout');
+    });
+
+</script>

@@ -1,0 +1,91 @@
+﻿@using DndDev.Repository
+@model IEnumerable<DndDev.Repository.SpellLevel>
+
+<table data-role="table" 
+       id="ClassLevelTable" 
+       class="table-stripe ui-responsive">
+    <thead>
+        <tr class="ui-bar-d">
+            <th>@Html.DisplayNameFor(model => model.Class)</th>
+            <th>@Html.DisplayNameFor(model => model.Level)</th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @if (null != Model)
+        {
+            foreach (var model in Model) {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => model.Class)</td>
+                    <td>@Html.DisplayFor(modelItem => model.Level)</td>
+                    <td><a href="#" class="deleteRow">delete</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+    
+    <tfoot>
+        <tr class="ui-bar-d">
+            <td>
+                <select id="ClassDropdown">
+                    <option value="Bard">Bard</option>
+                    <option value="Cleric">Cleric</option>
+                    <option value="Paladin">Paladin</option>
+                    <option value="Wizard">Wizard</option>
+                </select>
+            </td>
+            <td>
+                <input id="LevelTextBox" type="number" name="ClassText" value="1">
+            </td>
+            <td>
+                @*<a href="#" id="AddClassLevelButton" data-role="button" data-theme="b" data-mini="true" data-icon="check">Add</a>*@
+            
+                @Html.ActionLink("Add another...", "Create", null, new SpellLevel { Class = "Bard", Level = 5 })
+            
+            </td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        
+        // Add Support for Appending Rows to the the Class Level Table
+        $('#AddClassLevelButton').click(function () {
+
+            var className = $("#ClassDropdown option:selected").text();
+            var level = $("#LevelTextBox").val();
+
+            var deleteButton = '<a href="#" class="RemoveClassLevelButton ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-icon-left ui-btn-up-b" data-role="button" data-mini="true" data-icon="delete" data-theme="b" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner"><span class="ui-btn-text">Remove</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>';
+
+            var classLevelRow = '<tr>' +
+                '<td>' + className + '</td>' +
+                '<td>' + level + '</td>' +
+                '<td>' + deleteButton + '</td>' +
+                '</tr>';
+
+            $('#ClassLevelTable tbody').append(classLevelRow);
+            
+            ("#AddClassLevelButton").click(function () {
+                $.ajax({
+                    url: this.href,
+                    cache: false,
+                    success: function(html) {
+                         $("#editorRows").append(html);
+                    }
+                });
+                return false;
+            })
+
+
+            // Add Support for Removing Rows from the Table
+            $(".RemoveClassLevelButton").on("click", function () {
+                $(this).closest('tr').remove();
+            });
+        });
+
+    });
+</script>

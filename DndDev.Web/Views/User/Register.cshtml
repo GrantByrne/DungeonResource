@@ -1,0 +1,48 @@
+﻿@model DndDev.Web.Model.User.RegistrationViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-signin">
+
+    <h2>Register</h2>
+
+    <div class="form-horizontal">
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+    
+        <div class="control-group">
+            <label class="control-label">@Html.LabelFor(model => model.Username)</label>
+            <div class="controls">
+                @Html.EditorFor(model => model.Username)
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Username)</span>
+            </div>
+        </div>
+           
+        <div class="control-group">
+            <label class="control-label">@Html.LabelFor(model => model.Password)</label>
+            <div class="controls">
+                @Html.EditorFor(model => model.Password)
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Password)</span>
+            </div>
+        </div>
+    
+        <div class="control-group">
+            <label class="control-label">@Html.LabelFor(model => model.EMail)</label>
+            <div class="controls">
+                @Html.EditorFor(model => model.EMail)
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.EMail)</span>
+            </div>
+        </div>
+        
+        <input value="Create Account" class="btn btn-large btn-inverse" type="submit" />
+        
+        
+    }
+</div>
+</div>

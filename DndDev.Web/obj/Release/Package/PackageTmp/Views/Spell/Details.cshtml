@@ -1,0 +1,62 @@
+﻿@model DndDev.Domain.Spell.Spell
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="form-signin">
+
+    <h2>@Model.Name</h2>
+    <ul class="unstyled">
+        <li><b>Spell Level</b>
+            @foreach (var item in @Model.SpellLevels)
+            {
+                @item.SpellClass <i>@item.Level</i>
+            }
+        </li>
+        <li><b>Spell Resistance</b> @(Model.SpellResistance ? "Yes" : "No")</li>
+        <li><b>Duration</b> @Model.Duration</li>
+        <li><b>Targets</b> @Model.Targets</li>
+        <li><b>Casting Time</b> @Model.CastingTime</li>
+        <li><b>Range</b> @Model.Range.ToString()</li>
+        <li><b>Saving Throw</b> @(@Model.SavingThrow ? "Yes" : "No")</li>
+
+        <li><b>Component</b>
+            @((Model.Verbal) ? "Verbal" : "")
+            @((Model.Somatic) ? "Somatic" : "")
+            @((Model.Material) ? "Material" : "")
+            @((Model.Focus) ? "Focus" : "")
+        </li>
+
+    </ul>
+
+    <h3>Spell Details</h3>
+
+    <pre>
+@Model.Description
+</pre>
+
+    @if (Request.IsAuthenticated)
+    {
+
+    <a href='/spell/update/@Model.Id' class="btn btn-inverse">Edit Spell</a>
+    <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">Delete Spell</a>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Are You Sure?</h3>
+        </div>
+        <div class="modal-body">
+            <p>Removing this spell can lead to some unecessary downtime for the users. Are you sure you want to do this?</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-inverse" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <a href='@Url.Action("Delete", "Spell", new { id = Model.Id })' class="btn btn-danger">Delete Spell</a>
+        </div>
+    </div>
+        
+    }
+
+</div>

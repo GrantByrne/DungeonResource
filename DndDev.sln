@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndDev.Repository", "DndDev.Repository\DndDev.Repository.csproj", "{19450871-A64B-4095-AB1A-2906FE49BD5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndDev.Service", "DndDev.Service\DndDev.Service.csproj", "{4F83E7F2-51BE-4704-A9F8-C1C62D1C5A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndDev.Web", "DndDev.Web\DndDev.Web.csproj", "{DF52DFCE-AA8E-46BE-8389-D67FCEBBEFFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndDev.Domain", "DndDev.Domain\DndDev.Domain.csproj", "{1463EF2C-DBD6-45B8-81D8-C1E73E4C2B47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndDev.Scraper", "DndDev.Scraper\DndDev.Scraper.csproj", "{768AE832-1023-4DF3-AD72-28C56096DF2C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://holymoo.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DndDev.Repository\\DndDev.Repository.csproj
+		SccProjectName1 = DndDev.Repository
+		SccLocalPath1 = DndDev.Repository
+		SccProjectUniqueName2 = DndDev.Service\\DndDev.Service.csproj
+		SccProjectName2 = DndDev.Service
+		SccLocalPath2 = DndDev.Service
+		SccProjectUniqueName3 = DndDev.Web\\DndDev.Web.csproj
+		SccProjectName3 = DndDev.Web
+		SccLocalPath3 = DndDev.Web
+		SccProjectUniqueName4 = DndDev.Domain\\DndDev.Domain.csproj
+		SccProjectName4 = DndDev.Domain
+		SccLocalPath4 = DndDev.Domain
+		SccProjectUniqueName5 = DndDev.Scraper\\DndDev.Scraper.csproj
+		SccProjectName5 = DndDev.Scraper
+		SccLocalPath5 = DndDev.Scraper
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19450871-A64B-4095-AB1A-2906FE49BD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19450871-A64B-4095-AB1A-2906FE49BD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19450871-A64B-4095-AB1A-2906FE49BD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19450871-A64B-4095-AB1A-2906FE49BD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F83E7F2-51BE-4704-A9F8-C1C62D1C5A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F83E7F2-51BE-4704-A9F8-C1C62D1C5A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F83E7F2-51BE-4704-A9F8-C1C62D1C5A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F83E7F2-51BE-4704-A9F8-C1C62D1C5A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF52DFCE-AA8E-46BE-8389-D67FCEBBEFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF52DFCE-AA8E-46BE-8389-D67FCEBBEFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF52DFCE-AA8E-46BE-8389-D67FCEBBEFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF52DFCE-AA8E-46BE-8389-D67FCEBBEFFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1463EF2C-DBD6-45B8-81D8-C1E73E4C2B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1463EF2C-DBD6-45B8-81D8-C1E73E4C2B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1463EF2C-DBD6-45B8-81D8-C1E73E4C2B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1463EF2C-DBD6-45B8-81D8-C1E73E4C2B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768AE832-1023-4DF3-AD72-28C56096DF2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768AE832-1023-4DF3-AD72-28C56096DF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768AE832-1023-4DF3-AD72-28C56096DF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768AE832-1023-4DF3-AD72-28C56096DF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

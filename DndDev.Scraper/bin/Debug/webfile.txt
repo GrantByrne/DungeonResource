@@ -1,0 +1,795 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Rulebooks &ndash; D&amp;D Tools</title>
+  <link href="/static/favicon.ico" rel="SHORTCUT ICON"/>
+  <meta name="description" content="Complete list of all D&amp;D spells, rulebooks, feats, classes and more!"/>
+  <meta name="keywords" content="D&amp;D, Spells, Feats, Classes"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="google-site-verification" content="T0e3C-V9mijfHz3l51TYGDuvtf14Oz7MWKTxtUbT8Gs" />
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css?1364815749" title="style"/>
+  <script type="text/javascript" src="/static/js/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+  
+  
+  <link rel="stylesheet" href="//www.google.com/cse/style/look/default.css" type="text/css" />
+  
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27000767-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  
+</head>
+
+<body>
+<div id="fb-root"></div>
+
+
+<div id="main">
+  <div id="header">
+    <div id="logo">
+      <div id="logo_text">
+        <h1>
+          <a href="/">D&amp;D<span class="logo_colour">tools</span></a>
+        </h1>
+
+        <h2>Feats. Spells. Prestige Classes. And more!</h2>
+      </div>
+      
+      
+      <div id="google-search-holder">
+        <div id="cse-search-form" style="width: 100%">Loading</div>
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">
+          google.load('search', '1', {language : 'en'});
+          google.setOnLoadCallback(function() {
+            var customSearchControl = new google.search.CustomSearchControl('010918785989085430250:jd6tjgonwfu');
+            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            var options = new google.search.DrawOptions();
+            options.setAutoComplete(true);
+            options.enableSearchboxOnly("http://www.google.com/cse?cx=010918785989085430250:jd6tjgonwfu");
+            customSearchControl.draw('cse-search-form', options);
+          }, true);
+        </script>
+      </div>
+      
+    </div>
+    <div id="menubar">
+      <ul id="menu">
+        <li>
+          <a href="/">Home</a></li>
+
+        <li class="selected">
+          <a href="/rulebooks/">Rulebooks</a></li>
+
+        <li>
+          <a href="/feats/">Feats</a></li>
+
+        <li>
+          <a href="/spells/">Spells</a></li>
+
+        <li>
+          <a href="/classes/">Classes</a></li>
+
+
+
+        <li>
+          <a href="/skills/">Skills</a></li>
+
+        <li>
+          <a href="/contact/">Contact Us</a></li>
+
+        <li>
+          <a href="/staff/">Staff</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="site_content">
+    
+    <div id="breadcrumbs">
+      
+    &raquo; <a href="/rulebooks/">Rulebooks</a>
+
+    </div>
+    <div class="sidebar">
+        <form action="" method="get">
+            <label for="disable_social">
+                <input id="disable_social" name="disable_social" type="checkbox" checked="checked"/> All social disabled (faster)
+            </label>
+        </form>
+        <script type="text/javascript">
+            $("#disable_social").change(function(){
+                        if (this.checked) {
+                            $.cookie("disable_social", 1, { expires : 3650, path : '/'});
+                        } else {
+                            $.cookie("disable_social", null);
+                        }
+                        location.reload();
+                    }
+            );
+        </script>
+      
+      
+  <h3>Useful Links</h3>
+  <ul>
+  <li><a href="/rulebooks/">Rulebooks</a></li>
+  <li><a href="/editions/">Editions</a></li>
+  </ul>
+
+    </div>
+    <div id="content">
+      
+      
+      
+
+<h2>Rulebooks</h2>
+
+<p id="filter"><a href="javascript:void(0)">Filter: [+]</a></p>
+<form action="/rulebooks/" method="get">
+  <div class="form_settings" id="form" style="display:none;">
+<p><label for="id_name">Name:</label> <input type="text" name="name" id="id_name" /></p>
+<p><label for="id_dnd_edition__slug">Edition:</label> <select name="dnd_edition__slug" id="id_dnd_edition__slug">
+<option value="" selected="selected">Unknown</option>
+<option value="core-35">Core (3.5)</option>
+<option value="dragonlance">Dragonlance (3.0)</option>
+<option value="eberron-35">Eberron (3.5)</option>
+<option value="forgotten-realms-30">Forgotten Realms (3.0)</option>
+<option value="forgotten-realms-35">Forgotten Realms (3.5)</option>
+<option value="oriental-adventures">Oriental Adventures (3.0)</option>
+<option value="supplementals-30">Supplementals (3.0)</option>
+<option value="supplementals-35">Supplementals (3.5)</option>
+</select></p>
+  <p style="padding-top: 15px">
+    <span>&nbsp;</span><input class="submit" type="submit" value="Filter"/>
+  </p>
+</div>
+</form>
+
+<script>
+    $("#filter").click(function () {
+      $("#form").slideToggle("slow");
+    });
+</script>
+
+<div class="pagination">
+  
+  
+      <span class="disabled prev">&lsaquo;&lsaquo; previous</span>
+  
+  
+    
+      
+          <span class="current page">1</span>
+      
+    
+  
+  
+      <span class="disabled next">next &rsaquo;&rsaquo;</span>
+  
+  (total 107 items)
+  <form method="get" action=".">
+    
+    <label>Items per page:
+      <select name="page_size" onchange="this.form.submit()">
+        
+        <option value="20"
+        >20</option>
+      
+        <option value="50"
+        >50</option>
+      
+        <option value="100"
+        >100</option>
+      
+        <option value="1000"
+         selected="selected">1000</option>
+      
+    </select>
+    </label>
+  </form>
+</div>
+
+<table class="common">
+<tr>
+  <th>Rulebook name</th>
+  <th>Edition</th>
+</tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/arms-and-equipment-guide--35/">Arms and Equipment Guide</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/book-of-challenges-dungeon-rooms-puzzles-and-traps--36/">Book of Challenges: Dungeon Rooms, Puzzles, and Traps</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/book-of-exalted-deeds--52/">Book of Exalted Deeds</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/book-of-vile-darkness--37/">Book of Vile Darkness</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/champions-of-ruin--27/">Champions of Ruin</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/champions-of-valor--28/">Champions of Valor</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/city-of-splendors-waterdeep--16/">City of Splendors: Waterdeep</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/cityscape--53/">CityScape</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-adventurer--54/">Complete Adventurer</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-arcane--55/">Complete Arcane</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-champion--57/">Complete Champion</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-divine--56/">Complete Divine</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-mage--58/">Complete Mage</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-psionic--59/">Complete Psionic</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-scoundrel--60/">Complete Scoundrel</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/complete-warrior--61/">Complete Warrior</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/defenders-of-the-faith-a-guidebook-to-clerics-and-paladins--38/">Defenders of the Faith: A Guidebook to Clerics and Paladins</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/deities-and-demigods--39/">Deities and Demigods</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/draconomicon--92/">Draconomicon</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/dragon-compendium--109/">Dragon Compendium</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/dragon-magic--62/">Dragon Magic</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/dragonlance--9/dragonlance-campaign-setting--98/">Dragonlance Campaign Setting</a></td>
+            <td><a href="/rulebooks/dragonlance--9/">Dragonlance (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/dragonmarked--7/">Dragonmarked</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/dragons-ebberon--112/">Dragons of Ebberon</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/dragons-of-faerun--26/">Dragons of Faerun</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/drow-of-the-underdark--93/">Drow of the Underdark</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/dungeon-masters-guide-ii--40/">Dungeon Master&#39;s Guide II</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/core-35--1/dungeon-masters-guide-v35--4/">Dungeon Master&#39;s Guide v.3.5</a></td>
+            <td><a href="/rulebooks/core-35--1/">Core (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/dungeonscape--63/">Dungeonscape</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/eberron-campaign-setting--12/">Eberron Campaign Setting</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/elder-evils--110/">Elder Evils</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/enemies-and-allies--17/">Enemies and Allies</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/epic-level-handbook--41/">Epic Level Handbook</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/exemplars-of-evil--64/">Exemplars of Evil</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/expanded-psionics-handbook--65/">Expanded Psionics Handbook</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/expedition-to-castle-ravenloft--102/">Expedition to Castle Ravenloft</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/expedition-to-the-demonweb-pits--99/">Expedition to the Demonweb Pits</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/explorers-handbook--100/">Explorer&#39;s Handbook</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/faiths-pantheons--18/">Faiths &amp; Pantheons</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/faiths-of-eberron--8/">Faiths of Eberron</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/feats--111/">Feats</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/fiend-folio--42/">Fiend Folio</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/fiendish-codex-i-hordes-of-the-abyss--66/">Fiendish Codex I: Hordes of the Abyss</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/fiendish-codex-ii-tyrants-of-the-nine-hells--67/">Fiendish Codex II: Tyrants of the Nine Hells</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/five-nations--101/">Five Nations</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/forgotten-realms-campaign-setting--19/">Forgotten Realms Campaign Setting</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/frostburn--68/">Frostburn</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/ghostwalk--94/">Ghostwalk</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/heroes-of-battle--69/">Heroes of Battle</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/heroes-of-horror--70/">Heroes of Horror</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/libris-mortis-the-book-of-the-dead--71/">Libris Mortis: The Book of the Dead</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/lords-of-darkness--95/">Lords of Darkness</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/lords-of-madness--72/">Lords of Madness</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/lost-empires-of-faerun--30/">Lost Empires of Faerun</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/magic-item-compendium--73/">Magic Item Compendium</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/magic-of-eberron--9/">Magic of Eberron</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/magic-of-faerun--20/">Magic of Faerun</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/magic-of-incarnum--74/">Magic of Incarnum</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/manual-of-the-planes--43/">Manual of the Planes</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/masters-of-the-wild-a-guidebook-to-barbarians-druids-and-rangers--44/">Masters of the Wild: A Guidebook to Barbarians, Druids, and Rangers</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/miniatures-handbook--75/">Miniatures Handbook</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/monster-compendium-monsters-of-faerun--21/">Monster Compendium: Monsters of Faerûn</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/core-35--1/monster-manual--107/">Monster Manual</a></td>
+            <td><a href="/rulebooks/core-35--1/">Core (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/monster-manual-ii--45/">Monster Manual II</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/monster-manual-iii--76/">Monster Manual III</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/monster-manual-iv--77/">Monster Manual IV</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/monster-manual-v--78/">Monster Manual V</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/core-35--1/monster-manual-v35--5/">Monster Manual v.3.5</a></td>
+            <td><a href="/rulebooks/core-35--1/">Core (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/oriental-adventures--8/oriental-adventures--96/">Oriental Adventures</a></td>
+            <td><a href="/rulebooks/oriental-adventures--8/">Oriental Adventures (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/planar-handbook--79/">Planar Handbook</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/players-guide-to-eberron--13/">Player&#39;s Guide to Eberron</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/players-guide-to-faerun--22/">Player&#39;s Guide to Faerûn</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/players-handbook-ii--80/">Player&#39;s Handbook II</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/core-35--1/players-handbook-v35--6/">Player&#39;s Handbook v.3.5</a></td>
+            <td><a href="/rulebooks/core-35--1/">Core (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/players-handbook-30--106/">Players Handbook 3.0</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/power-of-faerun--31/">Power of Faerun</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/psionics-handbook-30--46/">Psionics Handbook 3.0</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/races-of-destiny--81/">Races of Destiny</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/races-of-eberron--10/">Races of Eberron</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/races-of-faerun--23/">Races of Faerun</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/races-of-stone--82/">Races of Stone</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/races-of-the-dragon--83/">Races of the Dragon</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/races-of-the-wild--84/">Races of the Wild</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/return-to-the-temple-of-elemental-evil--103/">Return to the Temple of Elemental Evil</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/sandstorm--85/">Sandstorm</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/savage-species--47/">Savage Species</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/secrets-of-sarlona--14/">Secrets of Sarlona</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/secrets-of-xendrik--15/">Secrets of Xen&#39;drik</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/serpent-kingdoms--24/">Serpent Kingdoms</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/sharn-city-of-towers--11/">Sharn: City of Towers</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/shining-south--25/">Shining South</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-30--6/silver-marches--97/">Silver Marches</a></td>
+            <td><a href="/rulebooks/forgotten-realms-30--6/">Forgotten Realms (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/song-and-silence-a-guidebook-to-bards-and-rogues--48/">Song and Silence: A Guidebook to Bards and Rogues</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/spell-compendium--86/">Spell Compendium</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/stormwrack--87/">Stormwrack</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/stronghold-builders-guidebook--49/">Stronghold Builder&#39;s Guidebook</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/sword-and-fist-a-guidebook-to-monks-and-fighters--50/">Sword and Fist: A Guidebook to Monks and Fighters</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/eberron-35--3/forge-war--105/">The Forge of War</a></td>
+            <td><a href="/rulebooks/eberron-35--3/">Eberron (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/the-shattered-gates-of-slaughtergarde--104/">The Shattered Gates of Slaughtergarde</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-30--7/tome-and-blood-a-guidebook-to-wizards-and-sorcerers--51/">Tome and Blood: A Guidebook to Wizards and Sorcerers</a></td>
+            <td><a href="/rulebooks/supplementals-30--7/">Supplementals (3.0)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/tome-of-battle-the-book-of-nine-swords--88/">Tome of Battle: The Book of Nine Swords</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/tome-of-magic--89/">Tome of Magic</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/unapproachable-east--33/">Unapproachable East</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/forgotten-realms-35--4/underdark--34/">Underdark</a></td>
+            <td><a href="/rulebooks/forgotten-realms-35--4/">Forgotten Realms (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/unearthed-arcana--90/">Unearthed Arcana</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/supplementals-35--5/weapons-of-legacy--91/">Weapons of Legacy</a></td>
+            <td><a href="/rulebooks/supplementals-35--5/">Supplementals (3.5)</a></td>
+        </tr>
+    
+        <tr>
+            <td><a href="/rulebooks/core-35--1/web--108/">Web</a></td>
+            <td><a href="/rulebooks/core-35--1/">Core (3.5)</a></td>
+        </tr>
+    
+</table>
+
+<div class="pagination">
+  
+  
+      <span class="disabled prev">&lsaquo;&lsaquo; previous</span>
+  
+  
+    
+      
+          <span class="current page">1</span>
+      
+    
+  
+  
+      <span class="disabled next">next &rsaquo;&rsaquo;</span>
+  
+  (total 107 items)
+  <form method="get" action=".">
+    
+    <label>Items per page:
+      <select name="page_size" onchange="this.form.submit()">
+        
+        <option value="20"
+        >20</option>
+      
+        <option value="50"
+        >50</option>
+      
+        <option value="100"
+        >100</option>
+      
+        <option value="1000"
+         selected="selected">1000</option>
+      
+    </select>
+    </label>
+  </form>
+</div>
+
+
+    </div>
+    
+  </div>
+  <div id="content_footer"></div>
+  <div id="footer">
+    
+  </div>
+</div>
+</body>
+</html>

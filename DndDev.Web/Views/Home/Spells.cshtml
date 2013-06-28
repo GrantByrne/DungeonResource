@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Spells";
+}
+
+@Scripts.Render("~/bundles/myBundle")
+
+<h2>Spells</h2>
+
+<div id="displayNode" > @Html.Partial("SpellList") </div>
+<br />
+<div id="createNode" >@Html.Partial("CreateSpell")</div>
