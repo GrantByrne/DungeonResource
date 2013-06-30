@@ -35,10 +35,47 @@ Favorite Patterns and Practices
 - SOLID
 - Service Layered Archetecture
 
+How is the Code Structure?
+--------------------------
+
+The whole Dungeon Resource codebase is broken out to create the greatest amount of 
+unit testibility and reusibility. While the whole structure does create a lot of 
+overhead in terms of design, there is a huge improvement to developement when it 
+comes to swapping out/changing integral components.
+
+- DndDev.Domain
+
+This project is reponsible for housing basic objects which can pass data between the 
+project layers. The objects go my many names: Domain Objects, POCO objects, or DTO objects. 
+For the scope of this project we will refer to it as Domain objects.
+
+- DndDev.Repository
+
+This project is responsible for managing all the external database access. Here is the 
+only place where you will find actual calls out to a database. The reason why this is 
+all in a separate project is to further expand the unit testibility and reusibility of 
+the codebase.
+
+- DndDev.Service
+
+The project is responsible for handling all the business logic associated with the project.
+
+- DndDev.MVC
+
+This houses the actual website. Here you will find controllers, views, and webapi controllers 
+which more or less serve out data provided by the service layer.
+
+
+- DndDev.Scraper
+
+This is a project that exists only for dirty database work. If I need to quickly convert 
+certain datasources and add it into the database, this is the place to do it.
+
+
 License
 ----------------------------
 
->Copyright (c) <year> <copyright holders>
+>Copyright (c) 2103 Grant Byrne
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy
 >of this software and associated documentation files (the "Software"), to deal
