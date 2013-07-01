@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using DndDev.Repository;
 using DndDev.Domain.Spell;
 using DndDev.Repository.Abstract;
 using DndDev.Service.Abstract;
@@ -9,12 +8,12 @@ namespace DndDev.Service
     public class SpellService : ISpellService
     {
         
-        private ISpellRepository _spellRepository;
+        private readonly ISpellRepository _spellRepository;
 
         /// <summary>
         /// ctor
         /// </summary>
-        /// <param name="spellRepo"></param>
+        /// <param name="spellRepository"></param>
         public SpellService(ISpellRepository spellRepository)
         {
             _spellRepository = spellRepository;

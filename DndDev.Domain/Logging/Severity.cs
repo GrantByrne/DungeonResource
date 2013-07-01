@@ -32,7 +32,7 @@
         /// but not necessarily "wrong". Expect these to be immediately 
         /// visible on a status console.
         /// </summary>
-        Warn,
+        Warning,
 
         /// <summary>
         ///  Interesting runtime events (startup/shutdown). Expect these 

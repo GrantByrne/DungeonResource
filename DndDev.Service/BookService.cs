@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using DndDev.Service.Abstract;
 using DndDev.Domain.Book;
 using DndDev.Repository.Abstract;
@@ -36,11 +32,11 @@ namespace DndDev.Service
         /// <summary>
         /// Reads out all the data about a book in the database
         /// </summary>
-        /// <param name="Id">The UID for the book in the database</param>
+        /// <param name="id">The UID for the book in the database</param>
         /// <returns>The details surrounding the book</returns>
-        public Book Read(int Id)
+        public Book Read(int id)
         {
-            return _bookRepository.Read(Id);
+            return _bookRepository.Read(id);
         }
 
         /// <summary>
@@ -55,10 +51,10 @@ namespace DndDev.Service
         /// <summary>
         /// Deletes a book from the database
         /// </summary>
-        /// <param name="Id">The UID for the single book entity</param>
-        public void Delete(int Id)
+        /// <param name="id">The UID for the single book entity</param>
+        public void Delete(int id)
         {
-            _bookRepository.Delete(Id);
+            _bookRepository.Delete(id);
         }
 
         /// <summary>

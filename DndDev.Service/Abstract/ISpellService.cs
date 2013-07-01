@@ -1,7 +1,5 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DndDev.Domain.Spell;
-
 
 namespace DndDev.Service.Abstract
 {
