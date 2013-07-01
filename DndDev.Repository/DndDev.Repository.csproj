@@ -65,6 +65,8 @@
     <Compile Include="Index\Spell\Spell_GetAll.cs" />
     <Compile Include="Index\Spell\Spell_GetById.cs" />
     <Compile Include="Index\User\User_GetByUsername.cs" />
+    <Compile Include="Logging\Abstract\ILoggingRepository.cs" />
+    <Compile Include="Logging\LoggingRepository.cs" />
     <Compile Include="MonsterRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpellRepository.cs" />

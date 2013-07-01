@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using DndDev.Domain.Logging;
 
-namespace DndDev.Repository.Logging
+namespace DndDev.Repository.Logging.Abstract
 {
     public interface ILoggingRepository
     {

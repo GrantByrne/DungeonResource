@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Book\Book.cs" />
     <Compile Include="Book\Reference.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Logging\Severity.cs" />
     <Compile Include="ReferenceEntity.cs" />
     <Compile Include="Feat\Feat.cs" />
     <Compile Include="Feat\FeatType.cs" />

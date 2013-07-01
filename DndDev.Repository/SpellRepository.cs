@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DndDev.Domain.Spell;
-using Raven.Client.Document;
 using Raven.Client;
 using DndDev.Repository.Abstract;
 
