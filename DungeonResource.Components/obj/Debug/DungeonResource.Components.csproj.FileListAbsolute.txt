@@ -1,0 +1,15 @@
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\DungeonResource.Components.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\DungeonResource.Components.pdb
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\Raven.Abstractions.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\Raven.Client.Lightweight.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\Raven.Abstractions.pdb
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\Raven.Abstractions.xml
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\Raven.Client.Lightweight.pdb
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\Raven.Client.Lightweight.xml
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\obj\Debug\DungeonResource.Components.csprojResolveAssemblyReference.cache
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\obj\Debug\DungeonResource.Components.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\obj\Debug\DungeonResource.Components.pdb
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\SimpleCrypto.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\AutoMapper.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\AutoMapper.Net4.dll
+C:\Users\g\documents\visual studio 2013\Projects\DungeonResource\DungeonResource.Components\bin\Debug\AutoMapper.xml

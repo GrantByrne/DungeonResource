@@ -1,5 +1,0 @@
-C:\Code\SpellBook\Main\Feature\InitialDevelopment\DndDev\DndDev.Domain\bin\Release\DndDev.Domain.dll
-C:\Code\SpellBook\Main\Feature\InitialDevelopment\DndDev\DndDev.Domain\bin\Release\DndDev.Domain.pdb
-C:\Code\SpellBook\Main\Feature\InitialDevelopment\DndDev\DndDev.Domain\obj\Release\DndDev.Domain.csprojResolveAssemblyReference.cache
-C:\Code\SpellBook\Main\Feature\InitialDevelopment\DndDev\DndDev.Domain\obj\Release\DndDev.Domain.dll
-C:\Code\SpellBook\Main\Feature\InitialDevelopment\DndDev\DndDev.Domain\obj\Release\DndDev.Domain.pdb

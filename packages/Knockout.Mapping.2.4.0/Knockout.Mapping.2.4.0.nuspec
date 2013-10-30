@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Knockout.Mapping</id>
     <version>2.4.0</version>
@@ -16,6 +16,5 @@
     <dependencies>
       <dependency id="knockoutjs" version="2.0.0" />
     </dependencies>
-    <references />
   </metadata>
 </package>

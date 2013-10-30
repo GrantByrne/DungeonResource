@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Ninject</id>
     <version>3.0.1.10</version>
@@ -12,8 +12,5 @@
     <description>Stop writing monolithic applications that make you feel like you have to move mountains to make the simplest of changes. Ninject helps you use the technique of dependency injection to break your applications into loosely-coupled, highly-cohesive components, and then glue them back together in a flexible manner.</description>
     <summary>IoC container for .NET</summary>
     <tags>Ninject ioc di</tags>
-    <references>
-      <reference file="Ninject.dll" />
-    </references>
   </metadata>
 </package>
