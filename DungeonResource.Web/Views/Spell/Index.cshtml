@@ -18,17 +18,19 @@
 
     <br />
 
-    <div class="accordion" id="accordion2">
+    <div class="panel-group" id="accordion">
 
         @foreach (var someClass in @Model.SelectMany(p => p.SpellLevels).Select(p => p.SpellClass).OrderBy(x => x).Distinct())
         {
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-@(someClass.Replace(" ", ""))">@someClass</a>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-@(someClass.Replace(" ", ""))">@someClass</a>
+                    </h4>
                 </div>
 
-                <div id="collapse-@(someClass.Replace(" ", ""))" class="accordion-body collapse">
-                    <div class="accordion-inner">
+                <div id="collapse-@(someClass.Replace(" ", ""))" class="panel-collapse collapse">
+                    <div class="panel-body">
                         <table class="table table-hover">
                             <thead>
                                 <tr>

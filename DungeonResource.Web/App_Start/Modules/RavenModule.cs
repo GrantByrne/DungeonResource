@@ -26,7 +26,7 @@ namespace DungeonResource.Web.App_Start.Modules
 
         private IDocumentStore InitDocStore(IContext context)
         {
-            DocumentStore ds = new DocumentStore { Url = "http://127.0.0.1:8080/" };
+            DocumentStore ds = new DocumentStore { ConnectionStringName="RavenHQ" };
             var something = ds.Url;
             ds.Initialize();
             return ds;
