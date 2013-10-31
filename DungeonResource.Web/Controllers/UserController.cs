@@ -87,6 +87,7 @@ namespace DungeonResource.Web.Controllers
             {
                 // Set up a cookie verifying the user is logged in
                 FormsAuthentication.SetAuthCookie(userDetails.Username, true);
+                //WebSecurity.Login(userDetails.Username, userDetails.Password);
 
                 return RedirectToAction("Index", "Spell");
             }

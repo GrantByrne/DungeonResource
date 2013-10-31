@@ -1,134 +1,185 @@
-﻿@model DungeonResource.Components.Domain.Spell.Spell
+﻿@using DungeonResource.Web.Models
+@model DungeonResource.Components.Domain.Spell.Spell
 
 @{
     ViewBag.Title = "Create";
 }
 
-<div class="form-signin">
+<script>
+
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('CreateSpellController', ['$scope', function ($scope) {
+
+        $scope.spell = {};
+
+        $scope.addSpellLevel = function () {
+
+            if ($scope.spell.SpellLevels === undefined) {
+                $scope.spell.SpellLevels = [];
+            }
+
+            var spellLevel = {
+                SpellClass: $scope.spellClass,
+                Level: $scope.spellLevel
+            };
+
+            $scope.spell.SpellLevels.push(spellLevel);
+
+            $scope.spellClass = undefined;
+            $scope.spellLevel = undefined;
+
+        };
+
+        $scope.remove = function (array, index) {
+            array.splice(index, 1);
+        };
+    }]);
+
+</script>
+
+
+
+<div class="form-signin" ng-app="myApp" ng-controller="CreateSpellController">
 
     <h2>Create Spell</h2>
 
     <br />
 
-    <div class="form-horizontal">
+    <form role="form">
 
-        <div class="control-group">
-            <label class="control-label">Spell Name</label>
-            <div class="controls">
-                <input type="text" data-bind="value: Name" class="input-xlarge">
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Name)</span>
+        @*Spell Name*@
+        <div class="form-group">
+            <label for="spellName">Spell Name</label>
+            <input type="text" class="form-control" id="spellName" placeholder="Enter spell name" ng-model="spell.Name" required>
+        </div>
+
+        @*Target*@
+        <div class="form-group">
+            <label for="spellTarget">Target</label>
+            <input type="text" class="form-control" id="spellTarget" placeholder="Enter spell target" ng-model="spell.Target" required>
+        </div>
+
+        @*Casting Time*@
+        <div class="form-group">
+            <label for="spellCastingTime">Casting Time</label>
+            <input type="text" class="form-control" id="spellCastingTime" placeholder="Enter casting time" ng-model="spell.CastingTime" required>
+        </div>
+
+        @*Duration*@
+        <div class="form-group">
+            <label for="spellDuration">Duration</label>
+            <input type="text" class="form-control" id="spellDuration" placeholder="Enter spell duration" ng-model="spell.Duration" required>
+        </div>
+
+        @*Range*@
+        <div class="form-group">
+            <div>
+                <label for="spellRange">Spell Range</label>
+            </div>
+            <div class="btn-group" id="spellRange" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option0"> Self
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option1"> Touch
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2"> Close
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3"> Medium
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option4"> Long
+                </label>
             </div>
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Target</label>
-            <div class="controls">
-                <input type="text" data-bind="value: Targets" class="input-xlarge">
+        @*Attributes*@
+        <div class="form-group">
+            <div>
+                <label for="spellImportant">Important</label>
+            </div>
+            <div class="btn-group" id="spellImportant" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input ng-model="spell.SpellResistance" type="checkbox"> Spell Resistance
+                </label>
+                <label class="btn btn-primary">
+                    <input ng-model="spell.SavingThrow" type="checkbox"> Saving Throw
+                </label>
             </div>
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Casting Time</label>
-            <div class="controls">
-                <input type="text" data-bind="value: CastingTime" class="input-xlarge">
+        @*Components*@
+        <div class="form-group">
+            <div>
+                <label for="spellComponents">Components</label>
+            </div>
+            <div class="btn-group" id="spellComponents" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input ng-model="spell.Verbal" type="checkbox"> Verbal
+                </label>
+                <label class="btn btn-primary">
+                    <input ng-model="spell.Somatic" type="checkbox"> Somatic
+                </label>
+                <label class="btn btn-primary">
+                    <input ng-model="spell.Material" type="checkbox"> Material
+                </label>
+                <label class="btn btn-primary">
+                    <input ng-model="spell.Focus" type="checkbox"> Focus
+                </label>
             </div>
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Duration</label>
-            <div class="controls">
-                <input type="text" data-bind="value: Duration" class="input-xlarge">
-            </div>
+        @*Class Levels*@
+        <div class="form-group">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Level</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="spellLevel in spell.SpellLevels">
+                        <td>{{spellLevel.SpellClass}}</td>
+                        <td>{{spellLevel.Level}}</td>
+                        <td><a href="" class="btn btn-primary" ng-click="remove(spell.SpellLevels, $index)">Remove</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Range</label>
-            <div class="controls">
-                <div class="btn-group" data-toggle="buttons-radio">
-                    @foreach (var range in Enum.GetValues(typeof(DungeonResource.Components.Domain.Spell.SpellRange)).Cast<DungeonResource.Components.Domain.Spell.SpellRange>())
-                    {
-                        <button type="button" value="@((int)Enum.Parse(typeof(DungeonResource.Components.Domain.Spell.SpellRange), range.ToString()))" data-bind="click: function() { Range('@((int)Enum.Parse(typeof(DungeonResource.Components.Domain.Spell.SpellRange), range.ToString()))') }, css: { active: Range() == '@((int)Enum.Parse(typeof(DungeonResource.Components.Domain.Spell.SpellRange), range.ToString()))' }" class="btn">@range</button>
-                    }
+        <div class="form-group">
+            <div class="form-inline">
+                <div class="form-group">
+                    <input type="text" id="className" placeholder="Class Name" ng-model="spellClass" />
                 </div>
-
+                <div class="form-group">
+                    <input type="number" id="spellLevel" placeholder="Class Level" ng-model="spellLevel" />
+                </div>
+                <div class="form-group">
+                    <a href="" class="btn btn-primary" ng-click="addSpellLevel()">Add</a>
+                </div>
             </div>
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Attributes</label>
-            <div class="controls">
-                <label class="checkbox">
-                    <input data-bind="checked: SpellResistance" type="checkbox">
-                    Spell Resistance
-                </label>
-                <label class="checkbox">
-                    <input data-bind="checked: SavingThrow" type="checkbox">
-                    Saving Throw
-                </label>
-            </div>
+        @*Description*@
+        <div class="form-group">
+            <textarea class="form-control" rows="3" ng-model="spell.Description"></textarea>
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Component</label>
-            <div class="controls">
-                <label class="checkbox">
-                    <input data-bind="checked: Verbal" type="checkbox">
-                    Verbal
-                </label>
-                <label class="checkbox">
-                    <input data-bind="checked: Somatic" type="checkbox">
-                    Somatic
-                </label>
-                <label class="checkbox">
-                    <input data-bind="checked: Material" type="checkbox">
-                    Material
-                </label>
-                <label class="checkbox">
-                    <input data-bind="checked: Focus" type="checkbox">
-                    Focus
-                </label>
-            </div>
+        @*Submit*@
+        <div class="form-group">
+            <input type="button" value="Add" class="btn btn-primary" data-bind="click: addSpell" />
         </div>
 
-        <div class="control-group">
-            <label class="control-label">Class Levels</label>
-            <div class="controls">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Class Name</th>
-                            <th>Level</th>
-                            <td></td>
-                        </tr>
-                    </thead>
-                    <tbody data-bind="foreach: SpellLevels">
-                        <tr>
-                            <td><span data-bind="text: $data.SpellClass"></span></td>
-                            <td>Level <span data-bind="text: $data.Level"></span></td>
-                            <td><a href="#" class="btn" data-bind="click: $parent.removeSpellLevel">Remove</a></td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">
-                                <input type="text" data-bind="value: ClassToAdd">
-                                <input class="input-small" type="number" data-bind="value: LevelToAdd">
-                                <button class="btn btn-inverse" data-bind="click: addSpellLevel">Add</button>
-                            </td>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
+    </form>
 
-        <div class="control-group">
-            <label class="control-label">Description</label>
-            <div class="controls">
-                <textarea style="width: 100%; height: 200px;" data-bind="value: Description"></textarea>
-            </div>
-        </div>
 
-        <br />
-        <input type="button" value="Add" class="btn btn-inverse" data-bind="click: addSpell" />
+    <div class="form-horizontal">
 
         <div id="myModal" class="modal hide fade">
             <div class="modal-body">
@@ -142,52 +193,3 @@
     </div>
 
 </div>
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-
-        var spellViewModel = ko.mapping.fromJS(@Html.Raw(Model.ToJson()));
-
-        spellViewModel.ClassToAdd = "";
-        spellViewModel.LevelToAdd = 1;
-
-        // Name:        addSpellLevel
-        // Description  Responsible for adding a Spell Level to the list on the Page
-        //              based on the data provided by the user
-        spellViewModel.addSpellLevel = function () {
-            spellViewModel.SpellLevels.push({ SpellClass: spellViewModel.ClassToAdd, Level: spellViewModel.LevelToAdd });
-        };
-
-        // Name:        removeSpellLevel
-        // Description: Responsible for removing the the spellLevel from the list
-        //              just in case the sure makes a mistake
-        spellViewModel.removeSpellLevel = function () {
-            spellViewModel.SpellLevels.remove(this);
-        };
-
-        // Name:        addSpell
-        // Description: Takes the data contained in the View and sends it back
-        //              to the server to be inserted into the database
-        self.addSpell = function () {
-            $.ajax({
-                beforeSend: function () { $('#myModal').modal('show') }, // Show loading modal
-                complete: function () { $('#myModal').modal('hide') }, // Hide loading modal
-                url: "/spell/create/",
-                type: 'post',
-                data: ko.toJSON(spellViewModel),
-                contentType: 'application/json',
-                success: function (result) {
-                    window.location = "/spell/";
-                }
-            });
-        };
-
-        ko.applyBindings(spellViewModel);
-
-        $("#foo").hide().trigger('updatelayout');
-
-
-    });
-
-</script>

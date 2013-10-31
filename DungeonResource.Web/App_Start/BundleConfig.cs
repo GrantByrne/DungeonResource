@@ -12,10 +12,7 @@ namespace DungeonResource.Web
                         "~/Scripts/Libs/AngularJS/angular.js",
                         "~/Scripts/Libs/Bootstrap/bootstrap.js",
                         "~/Scripts/Libs/JQuery/jquery-1.10.2.js",
-                        "~/Scripts/Libs/JQuery/jquery.validate.js",
-                        "~/Scripts/Libs/JQuery/knockout-3.0.0.js",
-                        "~/Scripts/Libs/Knockout/knockout.mapping-latest.js",
-                        "~/Scripts/Legacy/SpellViewModel.js"
+                        "~/Scripts/Libs/JQuery/jquery.validate.js"
                         ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
