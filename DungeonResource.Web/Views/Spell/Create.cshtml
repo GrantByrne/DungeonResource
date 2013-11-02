@@ -9,7 +9,7 @@
 
     var myApp = angular.module('myApp', []);
 
-    myApp.controller('CreateSpellController', ['$scope', function ($scope) {
+    myApp.controller('CreateSpellController', ['$scope', '$log', '$http', function ($scope, $log, $http) {
 
         $scope.spell = {};
 
@@ -34,6 +34,48 @@
         $scope.remove = function (array, index) {
             array.splice(index, 1);
         };
+
+        $scope.addSpell = function () {
+
+            // Show the Loading modal
+
+            var config = {
+                method: 'POST',
+                url: 'Create',
+                data: $scope.spell
+            };
+
+            $log.log("1");
+
+            $http(config).
+              success(function (data) {
+
+                  $log.log("2");
+
+
+                  // Move the user back to the homepage
+                  document.URL("/");
+
+              }).
+              error(function (data, status, headers, config) {
+
+                  $log.log("3");
+
+
+                  // Report to the user that an error has occured
+                  $scope.saveError = true;
+
+                  // Write the error information to the log
+                  $log.error(data);
+                  $log.error(status);
+                  $log.error(headers);
+                  $log.error(config);
+
+              });
+
+        };
+
+        $scope.saveError = false;
     }]);
 
 </script>
@@ -46,30 +88,34 @@
 
     <br />
 
-    <form role="form">
+    <form role="form" name="form">
 
         @*Spell Name*@
         <div class="form-group">
             <label for="spellName">Spell Name</label>
-            <input type="text" class="form-control" id="spellName" placeholder="Enter spell name" ng-model="spell.Name" required>
+            <input type="text" class="form-control" name="spellName" id="spellName" placeholder="Enter spell name" ng-model="spell.Name" required>
+            <span ng-show="form.spellName.$dirty && form.spellName.$invalid" class="label label-danger">Please Enter a Spell Name</span>
         </div>
 
         @*Target*@
         <div class="form-group">
             <label for="spellTarget">Target</label>
-            <input type="text" class="form-control" id="spellTarget" placeholder="Enter spell target" ng-model="spell.Target" required>
+            <input type="text" class="form-control" name="spellTarget" id="spellTarget" placeholder="Enter spell target" ng-model="spell.Targets" required>
+            <span ng-show="form.spellTarget.$dirty && form.spellTarget.$invalid" class="label label-danger">Please Enter a Target</span>
         </div>
 
         @*Casting Time*@
         <div class="form-group">
             <label for="spellCastingTime">Casting Time</label>
-            <input type="text" class="form-control" id="spellCastingTime" placeholder="Enter casting time" ng-model="spell.CastingTime" required>
+            <input type="text" class="form-control" name="spellCastingTime" id="spellCastingTime" placeholder="Enter casting time" ng-model="spell.CastingTime" required>
+            <span ng-show="form.spellCastingTime.$dirty && form.spellCastingTime.$invalid" class="label label-danger">Please Enter a Casting Time</span>
         </div>
 
         @*Duration*@
         <div class="form-group">
             <label for="spellDuration">Duration</label>
-            <input type="text" class="form-control" id="spellDuration" placeholder="Enter spell duration" ng-model="spell.Duration" required>
+            <input type="text" class="form-control" name="spellDuration" id="spellDuration" placeholder="Enter spell duration" ng-model="spell.Duration" required>
+            <span ng-show="form.spellDuration.$dirty && form.spellDuration.$invalid" class="label label-danger">Please Enter a Spell Duration</span>     
         </div>
 
         @*Range*@
@@ -168,28 +214,31 @@
 
         @*Description*@
         <div class="form-group">
-            <textarea class="form-control" rows="3" ng-model="spell.Description"></textarea>
+            <textarea class="form-control" rows="3" ng-model="spell.Description" required></textarea>
+            <span ng-show="form.spellCastingTime.$dirty && form.spellCastingTime.$invalid" class="label label-danger">Please Enter a Casting Time</span>
         </div>
 
         @*Submit*@
         <div class="form-group">
-            <input type="button" value="Add" class="btn btn-primary" data-bind="click: addSpell" />
+            <input type="button" value="Add" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="addSpell()" />
         </div>
 
     </form>
 
-
-    <div class="form-horizontal">
-
-        <div id="myModal" class="modal hide fade">
-            <div class="modal-body">
-                <h2>Loading...</h2>
-                <div class="progress progress-striped active">
-                    <div class="bar" style="width: 100%;"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2>Loading...</h2>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                            <span class="sr-only">45% Complete</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
 </div>
