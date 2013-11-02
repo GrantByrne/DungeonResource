@@ -11,10 +11,10 @@ namespace DungeonResource.Components.Domain.Spell
     /// </summary>
     public enum SpellRange
     {
-        Self,
-        Touch,
-        Close,
-        Medium,
-        Long
+        Self = 0,
+        Touch = 1,
+        Close = 2,
+        Medium = 3,
+        Long = 4
     }
 }

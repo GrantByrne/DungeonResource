@@ -227,6 +227,9 @@
     <Content Include="Content\images\irongrip.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\Controllers\CreateSpellController.js" />
+    <Content Include="Scripts\App\Controllers\UpdateSpellController.js" />
     <Content Include="Scripts\Libs\AngularJS\angular-bootstrap-prettify.js" />
     <Content Include="Scripts\Libs\AngularJS\angular-bootstrap-prettify.min.js" />
     <Content Include="Scripts\Libs\AngularJS\angular-bootstrap.js" />
@@ -580,7 +583,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\App\Controllers\" />
     <Folder Include="Scripts\App\Directives\" />
     <Folder Include="Scripts\App\Filters\" />
   </ItemGroup>

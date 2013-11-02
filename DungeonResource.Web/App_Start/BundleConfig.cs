@@ -10,9 +10,13 @@ namespace DungeonResource.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/libraries").Include(
                         "~/Scripts/Libs/AngularJS/angular.js",
+                        "~/Scripts/Libs/Angular-Ui-Bootstrap/ui-bootstrap-0.6.0.js",
                         "~/Scripts/Libs/Bootstrap/bootstrap.js",
                         "~/Scripts/Libs/JQuery/jquery-1.10.2.js",
-                        "~/Scripts/Libs/JQuery/jquery.validate.js"
+                        "~/Scripts/Libs/JQuery/jquery.validate.js",
+                        "~/Scripts/App/app.js",
+                        "~/Scripts/App/Controllers/CreateSpellController.js",
+                        "~/Scripts/App/Controllers/UpdateSpellController.js"
                         ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
