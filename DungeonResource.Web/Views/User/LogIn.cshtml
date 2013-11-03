@@ -12,24 +12,29 @@
     {
         @Html.ValidationSummary(true)
 
-        <div class="control-group">
-            <label class="control-label">@Html.LabelFor(model => model.Username)</label>
+        <div class="form-group">
+            <div>
+                <label class="control-label">@Html.LabelFor(model => model.Username)</label>
+                <span class="label-danger">@Html.ValidationMessageFor(model => model.Username)</span>
+            </div>
             <div class="controls">
                 @Html.EditorFor(model => model.Username)
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Username)</span>
             </div>
         </div>
 
-        <div class="control-group">
+    <div class="form-group">
+        <div>
             <label class="control-label">@Html.LabelFor(model => model.Password)</label>
-            <div class="controls">
-                @Html.EditorFor(model => model.Password)
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Password)</span>
-            </div>
+            <span class="label-danger">@Html.ValidationMessageFor(model => model.Password)</span>
         </div>
-        <input value="Sign In" class="btn btn-large btn-inverse" type="submit" />
+        <div class="controls">
+            @Html.EditorFor(model => model.Password)
+        </div>
+    </div>
 
-
+    <div>
+        <input value="Sign In" class="btn btn-large btn-default" type="submit" />
+    </div>
     }
 
 </div>

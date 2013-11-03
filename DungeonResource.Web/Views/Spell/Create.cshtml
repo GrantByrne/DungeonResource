@@ -67,19 +67,19 @@
                 <label>Spell Range</label>
             </div>
             <div class="btn-group">
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input type="radio" name="spellRange" data-ng-model="spell.Range" value="0"> Self
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input type="radio" name="spellRange" data-ng-model="spell.Range" value="1"> Touch
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input type="radio" name="spellRange" data-ng-model="spell.Range" value="2"> Close
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input type="radio" name="spellRange" data-ng-model="spell.Range" value="3"> Medium
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input type="radio" name="spellRange" data-ng-model="spell.Range" value="4"> Long
                 </label>
             </div>
@@ -91,10 +91,10 @@
                 <label for="spellImportant">Important</label>
             </div>
             <div class="btn-group" id="spellImportant">
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input ng-model="spell.SpellResistance" type="checkbox"> Spell Resistance
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input ng-model="spell.SavingThrow" type="checkbox"> Saving Throw
                 </label>
             </div>
@@ -106,16 +106,16 @@
                 <label for="spellComponents">Components</label>
             </div>
             <div class="btn-group" id="spellComponents">
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input ng-model="spell.Verbal" type="checkbox"> Verbal
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input ng-model="spell.Somatic" type="checkbox"> Somatic
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input ng-model="spell.Material" type="checkbox"> Material
                 </label>
-                <label class="btn btn-primary">
+                <label class="btn btn-default">
                     <input ng-model="spell.Focus" type="checkbox"> Focus
                 </label>
             </div>
@@ -138,7 +138,7 @@
                     <tr ng-repeat="spellLevel in spell.SpellLevels">
                         <td>{{spellLevel.SpellClass}}</td>
                         <td>{{spellLevel.Level}}</td>
-                        <td><a href="" class="btn btn-primary" ng-click="remove(spell.SpellLevels, $index)">Remove</a></td>
+                        <td><a href="" class="btn btn-default" ng-click="remove(spell.SpellLevels, $index)">Remove</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -147,14 +147,12 @@
         <div class="form-group">
             <div class="form-inline">
                 <div class="form-group">
-                    <input type="text" id="className" placeholder="Class Name" ng-model="spellClass" />
+                    <input class="form-control" type="text" id="className" placeholder="Class Name" ng-model="spellClass" />
                 </div>
                 <div class="form-group">
-                    <input type="number" id="spellLevel" placeholder="Class Level" ng-model="spellLevel" />
+                    <input class="form-control" type="number" id="spellLevel" placeholder="Class Level" ng-model="spellLevel" />
                 </div>
-                <div class="form-group">
-                    <a href="" class="btn btn-primary" ng-click="addSpellLevel()">Add</a>
-                </div>
+                <a href="" class="btn btn-default" ng-click="addSpellLevel()">Add</a>
             </div>
         </div>
 
@@ -171,7 +169,7 @@
         <div class="form-group">
             <input type="button"
                    value="Add"
-                   class="btn btn-primary"
+                   class="btn btn-default"
                    data-toggle="modal"
                    data-target="#myModal"
                    ng-disabled="!form.$valid"
