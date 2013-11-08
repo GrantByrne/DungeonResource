@@ -14,42 +14,17 @@
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Publisher)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PublicationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Edition)
-            </th>
-            <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
                 <td>
-                    @Html.ActionLink(item.Title, "Details", new { ID = item.ID })
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Publisher)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PublicationDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Edition)
+                    @item.Title
                 </td>
             </tr>
         }
 
     </table>
-
-    @if (Request.IsAuthenticated)
-    {
-        <br />
-        <a href="@Url.Action("Create")" class="btn btn-large btn-inverse btn-block">Add Book</a>
-    }
 
 </div>

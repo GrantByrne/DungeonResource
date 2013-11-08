@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NLog.RavenDb</id>
+    <version>0.0.4</version>
+    <title>NLog.RavenDb</title>
+    <authors>Mateusz Świetlicki</authors>
+    <owners>Mateusz Świetlicki</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/mswietlicki/NLog.RavenDb</projectUrl>
+    <iconUrl>http://nlog-project.org/N.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is NLog custom target build to empower NLog to send logs directly to RavenDb.</description>
+    <releaseNotes>v. 0.0.4: Added ApiKey parameter by levelnis</releaseNotes>
+    <copyright>Mateusz Świetlicki 2012</copyright>
+    <language />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0-Client">
+        <dependency id="NLog" version="2.0.0.2000" />
+        <dependency id="RavenDB.Client" version="1.0.972" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

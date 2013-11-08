@@ -45,7 +45,7 @@
             <li><b>Last Edited</b> @(Model.Editor ?? "System") - @((Model.LastEdited != DateTime.MinValue) ? Model.LastEdited.ToString() : "The Beginning")</li>
         </ul>
 
-        <a href='/spell/update/@Model.Id' class="btn btn-inverse">Edit Spell</a>
+        <a href='/spell/update/@Model.Id' class="btn btn-default">Edit Spell</a>
         <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">Delete Spell</a>
 
         <!-- Modal -->

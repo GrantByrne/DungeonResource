@@ -12,10 +12,12 @@ namespace DungeonResource.Web.Controllers
     public class SpellController : Controller
     {
         private ISpellService _spellService;
+        private ILogService _logService;
 
-        public SpellController(ISpellService spellService)
+        public SpellController(ISpellService spellService, ILogService logService)
         {
             _spellService = spellService;
+            _logService = logService;
         }
 
         public ActionResult Index()

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DungeonResource.Components.Service;
+using DungeonResource.Components.Service.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +20,14 @@ namespace DungeonResource.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        protected void Application_Error()
+        {
+            var lastException = Server.GetLastError();
+            var classLogger = new ClassLogger();
+            var loggerService = new LogService(classLogger);
+            loggerService.Fatal("Unhandled Exception", lastException);
         }
     }
 }

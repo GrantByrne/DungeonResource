@@ -45,3 +45,5 @@ C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Components\obj
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Components\obj\Debug\DungeonResource.Components.pdb
 C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Components\bin\Debug\NLog.dll
 C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Components\bin\Debug\NLog.xml
+C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Components\bin\Debug\NLog.config
+C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Components\bin\Debug\NLog.RavenDb.dll

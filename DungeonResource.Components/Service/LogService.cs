@@ -67,7 +67,7 @@ namespace DungeonResource.Components.Service
 
         public void Fatal(string message, Exception exception)
         {
-            _logger.Fatal(message, exception);
+            _logger.Fatal(exception.Message, exception.StackTrace);
         }
     }
 }
