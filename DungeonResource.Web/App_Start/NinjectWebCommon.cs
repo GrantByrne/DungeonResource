@@ -59,6 +59,7 @@ namespace DungeonResource.Web.App_Start
         {
             var modules = new INinjectModule[]
             {
+                new Modules.NLogModule(),
                 new Modules.RavenModule(),
                 new Modules.RepositoryModule(),
                 new Modules.ServiceModule(),

@@ -49,3 +49,5 @@ C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Test\bin\Debug
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Test\obj\Debug\DungeonResource.Test.csprojResolveAssemblyReference.cache
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Test\obj\Debug\DungeonResource.Test.dll
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Test\obj\Debug\DungeonResource.Test.pdb
+C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Test\bin\Debug\NLog.dll
+C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Test\bin\Debug\NLog.xml
