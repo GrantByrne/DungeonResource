@@ -24,11 +24,11 @@ myApp.controller('UpdateSpellController', ['$scope', '$log', '$http', '$location
     $scope.readSpell = function() {
 
         // Get the id of the item from the query string
-        var id = 129;
+        var id = 417;
 
         var config = {
             method: 'GET',
-            url: '/api/Get?id=' + id
+            url: '/api/spell/' + id
         };
 
         $http(config).
