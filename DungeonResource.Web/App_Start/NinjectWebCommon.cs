@@ -9,6 +9,7 @@ namespace DungeonResource.Web.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Modules;
+    using System.Web.Http;
 
     public static class NinjectWebCommon 
     {
@@ -43,6 +44,10 @@ namespace DungeonResource.Web.App_Start
             kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
             
             RegisterServices(kernel);
+
+            // Install the Ninject-based IDependencyResolver into the WebAPI config
+            GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
+
             return kernel;
         }
 

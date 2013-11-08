@@ -202,6 +202,8 @@
     <Compile Include="App_Start\Modules\ServiceModule.cs" />
     <Compile Include="App_Start\Modules\RepositoryModule.cs" />
     <Compile Include="App_Start\Modules\RavenModule.cs" />
+    <Compile Include="App_Start\NinjectDependencyResolver.cs" />
+    <Compile Include="App_Start\NinjectDependencyScope.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
