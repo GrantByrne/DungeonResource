@@ -246,3 +246,5 @@ C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Web\bin\Micros
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Web\obj\Debug\DungeonResource.Web.csprojResolveAssemblyReference.cache
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Web\obj\Debug\DungeonResource.Web.dll
 C:\Users\holymoo\Documents\GitHub\DungeonResource\DungeonResource.Web\obj\Debug\DungeonResource.Web.pdb
+C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Web\bin\NLog.dll
+C:\Users\g\Documents\GitHub\DungeonResource\DungeonResource.Web\bin\NLog.xml

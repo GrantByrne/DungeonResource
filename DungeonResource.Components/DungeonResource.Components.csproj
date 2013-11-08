@@ -38,6 +38,9 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.1.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\packages\RavenDB.Client.2.5.2700\lib\net45\Raven.Abstractions.dll</HintPath>
     </Reference>
@@ -63,6 +66,7 @@
     <Compile Include="Domain\Feat\FeatType.cs" />
     <Compile Include="Domain\Item\Item.cs" />
     <Compile Include="Domain\Item\ItemType.cs" />
+    <Compile Include="Domain\Log\Log.cs" />
     <Compile Include="Domain\Monster\Monster.cs" />
     <Compile Include="Domain\Monster\MonsterSkill.cs" />
     <Compile Include="Domain\Monster\MonsterSubtype.cs" />
@@ -84,9 +88,13 @@
     <Compile Include="Repository\MonsterRepository.cs" />
     <Compile Include="Repository\FeatRepository.cs" />
     <Compile Include="Repository\BookRepository.cs" />
+    <Compile Include="Service\Abstract\IClassLogger.cs" />
+    <Compile Include="Service\Abstract\ILogService.cs" />
     <Compile Include="Service\Abstract\IUserService.cs" />
     <Compile Include="Service\Abstract\ISpellService.cs" />
     <Compile Include="Service\Abstract\IBookService.cs" />
+    <Compile Include="Service\ClassLogger.cs" />
+    <Compile Include="Service\LogService.cs" />
     <Compile Include="Service\SpellService.cs" />
     <Compile Include="Service\UserService.cs" />
     <Compile Include="Service\BookService.cs" />
