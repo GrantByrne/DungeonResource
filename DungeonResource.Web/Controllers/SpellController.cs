@@ -102,7 +102,8 @@ namespace DungeonResource.Web.Controllers
 
                 _spellService.UpdateSpell(value);
                 return View(value);
-                }
+            }
+
             return RedirectToAction("Index");
         }
 

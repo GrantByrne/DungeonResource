@@ -2,6 +2,7 @@
     ViewBag.Title = "Update";
 }
 
+
 <div class="form-signin" ng-app="myApp" ng-controller="UpdateSpellController">
 
     <h2>Update Spell</h2>
@@ -172,7 +173,7 @@
                    data-toggle="modal"
                    data-target="#myModal"
                    ng-disabled="!form.$valid"
-                   ng-click="addSpell()" />
+                   ng-click="updateSpell()" />
             <span class="label label-danger" ng-show="!form.$valid">Watch Out! You're Missing Some Spell Data!</span>
         </div>
 

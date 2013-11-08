@@ -21,14 +21,14 @@ myApp.controller('UpdateSpellController', ['$scope', '$log', '$http', '$location
         array.splice(index, 1);
     };
 
-    $scope.readSpell = function() {
+    $scope.readSpell = function () {
 
-        // Get the id of the item from the query string
-        var id = 417;
+        var url = window.location.pathname;
+        var spellId = url.substring(url.lastIndexOf('/') + 1);
 
         var config = {
             method: 'GET',
-            url: '/api/spell/' + id
+            url: '/api/spell/' + spellId
         };
 
         $http(config).
