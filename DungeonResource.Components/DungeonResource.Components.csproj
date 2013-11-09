@@ -90,6 +90,8 @@
     <Compile Include="Repository\Abstract\IMonsterRepository.cs" />
     <Compile Include="Repository\Abstract\IBookRepository.cs" />
     <Compile Include="Repository\DomainRepository.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\Abstract\IGenericRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Repository\SpellRepository.cs" />
     <Compile Include="Repository\MonsterRepository.cs" />

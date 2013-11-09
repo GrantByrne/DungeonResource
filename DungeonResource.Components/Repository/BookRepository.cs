@@ -62,9 +62,11 @@ namespace DungeonResource.Components.Repository
         }
 
         /// <summary>
-        /// Updates the information about a book in the database
+        ///     Updates the information about a book in the database
         /// </summary>
-        /// <returns>The updated information about the book</returns>
+        /// <returns>
+        ///     The updated information about the book
+        /// </returns>
         public Book Update(Book bookDetails)
         {
             using (var session = _documentStore.OpenSession())
