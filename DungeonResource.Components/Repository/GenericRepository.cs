@@ -1,5 +1,4 @@
-﻿using DungeonResource.Components.Repository.Abstract;
-using Raven.Client;
+﻿using Raven.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace DungeonResource.Components.Repository
 {
-    public class GenericRepository : IGenericRepository
+    public class GenericRepository<T>
     {
         /// <summary>
-        /// Creates connection to the database
+        ///     Creates connection to the database
         /// </summary>
         private readonly IDocumentStore _documentStore;
 
         /// <summary>
-        /// ctor
+        ///     ctor
         /// </summary>
-        /// <param name="documentStore"></param>
         public GenericRepository(IDocumentStore documentStore)
         {
             _documentStore = documentStore;
         }
 
-        public Domain.Entity Create(Domain.Entity entity)
+        public T Create(T entity)
         {
             using (var session = _documentStore.OpenSession())
             {
@@ -35,32 +33,60 @@ namespace DungeonResource.Components.Repository
             return entity;
         }
 
-        public void Delete(int id)
+        public T Read(int id)
+        {
+            T entity;
+
+            using (var session = _documentStore.OpenSession())
+            {
+                entity = session.Load<T>(id);
+            }
+
+            return entity;
+        }
+
+        public List<T> Read()
+        {
+            List<T> entities;
+
+            using (var session = _documentStore.OpenSession())
+            {
+                entities = session.Query<T>().Take(1000).ToList();
+            }
+
+            return entities;
+        }
+
+        public List<T> Read(int page, int pageSize)
+        {
+            List<T> entities;
+
+            using (var session = _documentStore.OpenSession())
+            {
+                entities = session.Query<T>().Skip(page*pageSize).Take(pageSize).ToList();
+            }
+
+            return entities;
+        }
+
+        public T Update(T entity)
         {
             using (var session = _documentStore.OpenSession())
             {
+                session.Store(entity);
                 session.SaveChanges();
             }
+
+            return entity;
         }
 
-        public List<Domain.Entity> Read()
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Domain.Entity> Read(int page, int pageSize)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Domain.Entity Read(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Domain.Entity Update(Domain.Entity newSpell)
-        {
-            throw new NotImplementedException();
+            using (var session = _documentStore.OpenSession())
+            {
+                session.Delete<T>(entity);
+                session.SaveChanges();
+            }
         }
     }
 }
