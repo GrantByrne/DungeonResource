@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="Components\Domain\TestObject.cs" />
     <Compile Include="Components\Service\TestObjectService.cs" />
+    <Compile Include="Integration\Components\Repository\UserRepositoryTest.cs" />
     <Compile Include="Integration\Components\Repository\GenericRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\Components\Repository\GenericRepositoryTest.cs" />

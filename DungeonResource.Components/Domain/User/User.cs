@@ -10,12 +10,8 @@ namespace DungeonResource.Components.Domain.User
     /// Datatype to hold all the information surround a user's login 
     /// credentials
     /// </summary>
-    public class User
+    public class User : Entity
     {
-        /// <summary>
-        /// The UID for the User
-        /// </summary>
-        public string Id { get; set; }
 
         /// <summary>
         /// The login name for the user

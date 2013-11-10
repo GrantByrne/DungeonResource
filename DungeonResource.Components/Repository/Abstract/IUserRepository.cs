@@ -14,6 +14,5 @@ namespace DungeonResource.Components.Repository.Abstract
         User Read(string username);
         User Update(User someFeat);
         void Delete(int id);
-        List<User> ReadAll();
     }
 }

@@ -62,11 +62,10 @@ namespace DungeonResource.Components.Repository
 
             using (var session = _documentStore.OpenSession())
             {
-                var result = from user in session.Query<User>()
-                             where user.Username == username
-                             select user;
-
-                userDetails = result.FirstOrDefault();
+                userDetails = session.Query<User>()
+                    .Where(p => p.Username == username)
+                    .ToList<User>()
+                    .FirstOrDefault();
             }
 
             return userDetails;
@@ -82,8 +81,6 @@ namespace DungeonResource.Components.Repository
             using (var session = _documentStore.OpenSession())
             {
                 session.Store(userDetails);
-
-                // TODO - Test whether this line is actually needed
                 session.SaveChanges();
             }
 
@@ -101,22 +98,6 @@ namespace DungeonResource.Components.Repository
                 var entityId = "users/" + id;
                 session.Advanced.DocumentStore.DatabaseCommands.Delete(entityId, null);
             }
-        }
-
-        /// <summary>
-        /// Reads out all the users in the database
-        /// </summary>
-        /// <returns>A list containing all the users in the database</returns>
-        public List<User> ReadAll()
-        {
-            List<User> allUsers;
-
-            using (var session = _documentStore.OpenSession())
-            {
-                allUsers = session.Query<User>().ToList();
-            }
-
-            return allUsers;
         }
     }
 }
