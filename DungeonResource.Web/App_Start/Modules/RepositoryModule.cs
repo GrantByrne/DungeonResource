@@ -12,9 +12,8 @@ namespace DungeonResource.Web.App_Start.Modules
     {
         public override void Load()
         {
-            Bind<ISpellRepository>().To<SpellRepository>();
             Bind<IUserRepository>().To<UserRepository>();
-            Bind<IBookRepository>().To<BookRepository>();
+            Bind(typeof(IGenericRepository<>)).To(typeof(GenericRepository<>));
         }
     }
 }

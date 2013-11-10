@@ -1,6 +1,7 @@
 ﻿using Raven.Client;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace DungeonResource.Components.Repository
 {
@@ -50,11 +51,12 @@ namespace DungeonResource.Components.Repository
         /// <param name="entity">
         ///     The details surrounding the item to be deleted out of the database
         /// </param>
-        public void Delete(T entity)
+        public void Delete(int id)
         {
             using (var session = _documentStore.OpenSession())
             {
-                session.Delete<T>(entity);
+                var entity = session.Load<T>(id);
+                session.Delete(entity);
                 session.SaveChanges();
             }
         }
@@ -127,7 +129,7 @@ namespace DungeonResource.Components.Repository
             var amount = pageSize;
             if (amount > 1000)
             {
-                amount = 1000;
+                throw new ArgumentException("Limit page size to something lower than 1000");
             }
 
             using (var session = _documentStore.OpenSession())

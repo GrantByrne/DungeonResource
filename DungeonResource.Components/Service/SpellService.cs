@@ -1,4 +1,5 @@
 ﻿using DungeonResource.Components.Domain.Spell;
+using DungeonResource.Components.Repository;
 using DungeonResource.Components.Repository.Abstract;
 using DungeonResource.Components.Service.Abstract;
 using System;
@@ -12,15 +13,14 @@ namespace DungeonResource.Components.Service
     public class SpellService : ISpellService
     {
 
-        private readonly ISpellRepository _spellRepository;
+        private readonly IGenericRepository<Spell> _genericRepository;
 
         /// <summary>
         /// ctor
         /// </summary>
-        /// <param name="spellRepository"></param>
-        public SpellService(ISpellRepository spellRepository)
+        public SpellService(IGenericRepository<Spell> genericRepository)
         {
-            _spellRepository = spellRepository;
+            _genericRepository = genericRepository;
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace DungeonResource.Components.Service
         /// <param name="newSpell">Details for the new spell</param>
         public void CreateSpell(Spell newSpell)
         {
-            _spellRepository.CreateSpell(newSpell);
+            _genericRepository.Create(newSpell);
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace DungeonResource.Components.Service
         /// <param name="id">The Uid of the spell</param>
         public void DeleteSpell(int id)
         {
-            _spellRepository.DeleteSpell(id);
+            _genericRepository.Delete(id);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace DungeonResource.Components.Service
         /// <returns>All the spells in the database</returns>
         public List<Spell> ReadAllSpells()
         {
-            return _spellRepository.ReadAllSpells();
+            return _genericRepository.Read();
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace DungeonResource.Components.Service
         /// <returns></returns>
         public Spell ReadSpell(int id)
         {
-            return _spellRepository.ReadSpell(id);
+            return _genericRepository.Read(id);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace DungeonResource.Components.Service
         /// <returns>The new spell object</returns>
         public Spell UpdateSpell(Spell newSpell)
         {
-            return _spellRepository.UpdateSpell(newSpell);
+            return _genericRepository.Update(newSpell);
         }
 
     }

@@ -5,7 +5,7 @@ namespace DungeonResource.Components.Repository
     public interface IGenericRepository<T>
     {
         T Create(T entity);
-        void Delete(T entity);
+        void Delete(int id);
         System.Collections.Generic.List<T> Read();
         T Read(int id);
         System.Collections.Generic.List<T> Read(int page, int pageSize);

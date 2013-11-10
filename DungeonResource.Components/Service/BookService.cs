@@ -1,4 +1,5 @@
 ﻿using DungeonResource.Components.Domain.Book;
+using DungeonResource.Components.Repository;
 using DungeonResource.Components.Repository.Abstract;
 using DungeonResource.Components.Service.Abstract;
 using System;
@@ -14,14 +15,14 @@ namespace DungeonResource.Components.Service
     /// </summary>
     public class BookService : IBookService
     {
-        private readonly IBookRepository _bookRepository;
+        private readonly IGenericRepository<Book> _genericRepository;
 
         /// <summary>
-        /// ctor
+        ///     ctor
         /// </summary>
-        public BookService(IBookRepository bookrepository)
+        public BookService(IGenericRepository<Book> genericRepository)
         {
-            _bookRepository = bookrepository;
+            _genericRepository = genericRepository;
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace DungeonResource.Components.Service
         /// <returns>The book with the newly created Id</returns>
         public Book Create(Book bookDetails)
         {
-            return _bookRepository.Create(bookDetails);
+            return _genericRepository.Create(bookDetails);
         }
 
         /// <summary>
@@ -40,7 +41,7 @@ namespace DungeonResource.Components.Service
         /// <returns>The details surrounding the book</returns>
         public Book Read(int id)
         {
-            return _bookRepository.Read(id);
+            return _genericRepository.Read(id);
         }
 
         /// <summary>
@@ -49,7 +50,7 @@ namespace DungeonResource.Components.Service
         /// <returns>The updated information about the book</returns>
         public Book Update(Book bookDetails)
         {
-            return _bookRepository.Update(bookDetails);
+            return _genericRepository.Update(bookDetails);
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace DungeonResource.Components.Service
         /// <param name="id">The UID for the single book entity</param>
         public void Delete(int id)
         {
-            _bookRepository.Delete(id);
+            _genericRepository.Delete(id);
         }
 
         /// <summary>
@@ -67,7 +68,7 @@ namespace DungeonResource.Components.Service
         /// <returns>A list containing all the books in the database</returns>
         public IEnumerable<Book> ReadAll()
         {
-            return _bookRepository.ReadAll();
+            return _genericRepository.Read();
         }
     }
 }
