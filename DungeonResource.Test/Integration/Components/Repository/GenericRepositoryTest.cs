@@ -5,9 +5,11 @@ using Raven.Client;
 using Raven.Client.Embedded;
 using DungeonResource.Test.Components.Service;
 using NUnit.Framework;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DungeonResource.Test.Integration.Components.Repository
 {
+    [ExcludeFromCodeCoverage]
     [TestFixture]
     public class GenericRepositoryTest
     {

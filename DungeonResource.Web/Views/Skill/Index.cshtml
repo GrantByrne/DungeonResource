@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DungeonResource.Components.Domain.Skill.Skill>
+
+@{
+    ViewBag.Title = "Skills";
+}
+
+<div class="form-signin">
+
+    <h2>@ViewBag.Title</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Psionic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trained)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorCheck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Action)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Psionic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trained)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArmorCheck)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Action)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

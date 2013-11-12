@@ -7,9 +7,11 @@ using Raven.Client;
 using System.Collections.Generic;
 using DungeonResource.Test.Components.Domain;
 using DungeonResource.Test.Components.Service;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DungeonResource.Test.Unit.Components.Repository
 {
+    [ExcludeFromCodeCoverage]
     [TestFixture]
     public class GenericRepositoryTest
     {

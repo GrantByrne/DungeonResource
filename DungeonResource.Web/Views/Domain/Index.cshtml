@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DungeonResource.Components.Domain.Domain.Domain>
+
+@{
+    ViewBag.Title = "Domains";
+}
+
+<div class="form-signin">
+
+    <h2>@ViewBag.Title</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                Granted Powers
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrantedPowers)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

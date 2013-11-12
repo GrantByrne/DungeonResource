@@ -8,9 +8,11 @@ using NUnit.Framework;
 using DungeonResource.Components.Repository.Abstract;
 using DungeonResource.Components.Domain.User;
 using System.Threading;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DungeonResource.Test.Integration.Components.Repository
 {
+    [ExcludeFromCodeCoverage]
     [TestFixture]
     public class UserRepositoryTest
     {

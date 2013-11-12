@@ -216,6 +216,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\SpellController.cs" />
+    <Compile Include="Controllers\DomainController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\SpellController.cs" />
@@ -265,6 +267,7 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\dungeonresource.com - Web Deploy.pubxml" />
     <None Include="Scripts\Libs\JQuery\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Libs\AngularJS\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\Libs\AngularJS\i18n\angular-locale_af-za.js" />
@@ -593,6 +596,8 @@
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\User\LogIn.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Domain\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
